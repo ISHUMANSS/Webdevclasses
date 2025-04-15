@@ -1,0 +1,41 @@
+body {
+  color: black;
+  background-image: url('swin.jpg');
+  background-repeat: no-repeat;
+  background-position: right top;
+  background-color: white;
+  margin-bottom: 6ex;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  
+}
+
+h1 {
+  color: #039;
+  margin-bottom: 2ex;
+  }
+
+h2, h3, h4, h5, h6 {
+  color: #039;
+}
+
+table {
+  margin-right: 0ex;
+  margin-bottom: 0ex;
+  width:75%;
+}
+
+thead td, th {
+  color: black;
+  background: #cccccc;
+  font-size: smaller;
+  font-weight: bold;
+  text-align: center;
+}
+
+tbody td, td {
+  color: black;
+  background: #eeeeee;
+  font-size: small;
+  text-align: left;
+}

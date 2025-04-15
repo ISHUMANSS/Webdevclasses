@@ -1,0 +1,5 @@
+use stu8070;
+create table cars (ID varchar(10) NOT NULL UNIQUE, Make varchar(40), Model varchar(40), Price decimal(8,2));
+insert into cars values('00001','Hyandai', 'Accent', 2000);
+insert into cars values('00002', 'Mercedece-Benz', '230E', 3000);
+insert into cars values('00003', 'Holden', 'HD', 5000);
