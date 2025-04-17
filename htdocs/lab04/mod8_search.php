@@ -52,10 +52,14 @@
 			// _assoc is used instead of _row, so field name can be used
 			while ($row = mysqli_fetch_assoc($result)){
 				echo "<tr>";
-				echo "<td>",$row["ID"],"</td>";
-				echo "<td>",$row["Make"],"</td>";
-				echo "<td>",$row["Model"],"</td>";
-				echo "<td>",$row["Price"],"</td>";
+
+//make sure this matches the db
+
+
+				echo "<td>",$row["id"],"</td>";
+				echo "<td>",$row["make"],"</td>";
+				echo "<td>",$row["model"],"</td>";
+				echo "<td>",$row["price"],"</td>";
 				echo "</tr>";
 			}
 			echo "</table>";

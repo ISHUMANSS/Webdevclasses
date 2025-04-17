@@ -10,7 +10,8 @@
 	
 	// The @ operator suppresses the display of any error messages
 	// mysqli_connect returns false if connection failed, otherwise a connection value
-	$conn = @mysqli_connect($sql_host,
+	$conn = @mysqli_connect(
+		$sql_host,
 		$sql_user,
 		$sql_pass,
 		$sql_db
@@ -24,6 +25,10 @@
 		// Upon successful connection
 		
 		// Get data from the form
+
+
+//NEED TO MAKE SURE THIS MATCHES WHAT YOU HAVE IN THE DB
+
 		$id1    = $_POST["id"];
         $make	= $_POST["make"];
 		$model	= $_POST["model"];
