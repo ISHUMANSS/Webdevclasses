@@ -61,7 +61,7 @@
 		
 		// close the database connection
 		mysqli_close($conn);
-	} // if successful database connection
+	 // if successful database connection
 ?>
 </body>
 </html>
