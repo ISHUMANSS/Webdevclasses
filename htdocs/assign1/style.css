@@ -1,0 +1,60 @@
+/*define all the colours used through the website to easily change*/
+:root{
+    /*use with var(--coulorname)*/
+
+    --background:#FAF9F6 ;
+    --navButton: #83ebc1;
+
+    --navBackground: #505e58;
+
+    --textColour: black;
+
+}
+
+
+/*container used on every page to make sure all content is in the same space*/
+.container-fluid{
+    background-color: var(--background);
+
+    border-radius: 25px;
+    padding: 3%;
+    padding-top: 0.5%;
+    
+    margin: auto;
+    margin-top: 0.5%;
+    
+
+}
+
+
+/*used as the nav bar on every page*/
+.nav_bar{
+    position: sticky;
+    top: 0;
+    overflow: hidden;
+
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    
+    justify-content: center;
+
+    gap: 5px;
+
+    align-content: space-around;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+
+    background-color: var(--navBackground);
+    border-radius: 25px;
+
+    /*change the buttons in the nav bar*/
+    .btn{
+        background-color: var(--navButton);
+
+    }
+}
