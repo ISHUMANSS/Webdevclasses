@@ -19,9 +19,63 @@
 
             </div>
 
-            <!--Post status code-->
+            <h1 class="page_title">Status Posting System</h1>
 
+            <div class="form_container">
+                <form action="poststatusprocess.php" method="post">
+                   <div class="form_item">
+                        <label for="stcode">Status Code:</label>
+                        <!--patten to make sure the only the needed patten can be entered also forces upper case-->
+                        <input type="text" id="stcode" name="stcode" pattern="S\d{4}" required placeholder="e.g. S0001" oninput="this.value = this.value.toUpperCase()">
+                        <small>Must start with S followed by 4 digits</small>
+                   </div>
+                   <div class="form_item">
+                        <label for="st">Status:</label>
+                        <input type="text" id="st" name="st" required placeholder="e.g. Doing my first assignment">
+                        <small>Only alphanumericals, comma, period, exclamation and question marks allowed</small>
+                   </div>
+                   <div class="form_item">
+                        <label>Share:</label>
+                        <label>
+                            <input type="radio" name="share" value="University" checked> University
+                        </label>
+                        <label>
+                            <input type="radio" name="share" value="Class"> Class
+                        </label>
+                        <label>
+                            <input type="radio" name="share" value="Private"> Private
+                        </label>
+                    
+                   </div>
+                   <div class="form_item">
+                        <label for="date">Date:</label>
+                        <?php
+                            //get the data from the system
+                            $currentDate = date("d/m/Y");
+                            echo "<input type=\"text\" id=\"date\" name=\"date\" value=\"$currentDate\" required>";
+                        ?>
+                        <small>Format: dd/mm/yyyy</small>
+                   </div>
+                   <div class="form_item">
+                        <label>Permission:</label>
+                        <label>
+                            <input type="checkbox" name="permissions[]" value="Allow Like"> Allow Like
+                        </label>
+                        <label>
+                            <input type="checkbox" name="permissions[]" value="Allow Comments"> Allow Comments
+                        </label>
+                        <label>
+                            <input type="checkbox" name="permissions[]" value="Allow Share"> Allow Share
+                        </label>
+                    
+                   </div>
+                   <div class="form_item">
+                        <input type="submit" value="Submit" class="btn">
+                   </div>
+                </form>
+            </div>
 
+            <a href="index.html" >Return to Home Page</a>
 
         </div>
     </body>
