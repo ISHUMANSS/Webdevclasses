@@ -6,7 +6,7 @@
         <meta name="keywords" content="Web Development, Assignment 1">
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-        <title>Web Development Assignment 1</title>
+        <title>Search</title>
     </head>
     <body>
         <div class="container-fluid">
@@ -21,11 +21,23 @@
             
             <h1 class="page_title">Search For A Status</h1>
 
-
-
             <!--Form to search for the status then sends to the php code-->
+            <div class="form_container">
+                <form  action="searchstatusprocess.php" method="get">
+                    
+                    <div class="form_item">
+                        <label for="Search">Enter keyword to search:</label>
+                        <input type="text" id="Search" name="Search" placeholder="Enter status keyword..." >
+                        
+                    </div>
+                    <div class="form_item">
+                        <input type="submit" value="Show Results" class="btn">
+                    </div>
+                </form>
+            </div>
 
 
+            <a href="index.html" >Return to Home Page</a>
         </div>
     </body>
 

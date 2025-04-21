@@ -12,7 +12,13 @@
 
     --formBackground: #dddbc9;
 
+    --searchBackground: #a3d4c3;  
+
     --textColour: black;
+
+    --error:#df0000;
+
+    --success:green;
 
 }
 
@@ -39,8 +45,6 @@
         padding-bottom: 15px;
 
     }
-    
-    
     
 
 }
@@ -121,3 +125,20 @@
 
     }
 }
+
+.search{
+    padding-top: 3px;
+    padding-bottom: 3px;
+    border-radius: 10px;
+
+    background-color: var(--searchBackground);
+    .search_content{
+        padding-left: 20px;
+        margin-top: 10px;
+
+        h1{
+            font-weight: bold;
+        }
+    }
+}
+

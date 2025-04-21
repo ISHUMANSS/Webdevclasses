@@ -18,7 +18,11 @@ SELECT COUNT(*) FROM statuses WHERE status_code = '$fm_stcode';
 //insert the status into the statuses table
 INSERT INTO statuses (status_code, status, share, perm, date) VALUES ('$fm_stcode', '$fm_status', '$fm_share', '$fm_perm','$fm_date');
 
+//check to see if status exists
+SHOW TABLES LIKE statuses;
 
+//search statuses to see if any of them match the search
+SELECT * FROM statuses WHERE status LIKE '%$searchString%';
 
 //delete the table statuses
 DROP TABLE statuses;
