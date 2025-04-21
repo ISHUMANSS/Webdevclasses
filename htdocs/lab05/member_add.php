@@ -44,7 +44,7 @@
 
             //insert info into the table from the form
 
-            $query = "INSERT INTO vipmember (fname, lname, gender, email, phone) VALUES ('$fm_fname', '$fm_lname', '$fm_gender', '$fm_email', '$fm_phone')";
+            $query = "INSERT INTO vipmember (fname, lname, gender, email, phone)  ('$fm_fname', '$fm_lname', '$fm_gender', '$fm_email', '$fm_phone')";
             echo $query;
             // executes the query
             $result = mysqli_query($conn, $query);

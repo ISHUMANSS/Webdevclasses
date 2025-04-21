@@ -1,0 +1,24 @@
+//text file contianing all the sql script used
+
+//check / create the status table
+CREATE TABLE IF NOT EXISTS `statuses` (
+    `status_code` varchar(5) NOT NULL,
+    `status` varchar(500) NOT NULL,
+    `share` enum('University','Class','Private') NOT NULL,
+    `perm` varchar(40) ,
+    `date` date NOT NULL,
+    PRIMARY KEY (`status_code`)
+);
+
+//check if if the status code has been used before
+//get the amount of times the code has be used before
+SELECT COUNT(*) FROM statuses WHERE status_code = '$fm_stcode';
+
+
+//insert the status into the statuses table
+INSERT INTO statuses (status_code, status, share, perm, date) VALUES ('$fm_stcode', '$fm_status', '$fm_share', '$fm_perm','$fm_date');
+
+
+
+//delete the table statuses
+DROP TABLE statuses;
