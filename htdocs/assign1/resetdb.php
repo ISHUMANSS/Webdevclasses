@@ -1,8 +1,6 @@
 <?php
     //code to drop the tables
     require_once ("../../files/settings.php"); 
-
-
     $conn = mysqli_connect(
         $host,
         $user,
