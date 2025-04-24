@@ -70,7 +70,6 @@
 
                         //check status code matches the pattern
                         if((!preg_match('/^S\d{4}$/', $fm_stcode))){
-                            //return to post status with a fomat error
                             echo "<p >Wrong format! with '$fm_stcode' the status code must start with an “S” followed by four digits, like “S0001“.</p>";
                             echo "<a href='poststatusform.php'>Try Again</a> | <a href='index.html'>Return to Home Page</a>";
                             exit();
@@ -92,7 +91,6 @@
                         //check status only has alphanumericals, spaces, comma, 
                         //period, exclamation point, question mark and is not blank
                         if((!preg_match('/^[a-zA-Z0-9,\.!? ]+$/', $fm_status))){
-                            //return to post status with a fomat error
                             echo "<p>Your status: '$fm_status' is in a wrong format! The status can only contain alphanumericals and spaces, comma, period, exclamation point and question mark and cannot be blank!</p>";
                             echo "<a href='poststatusform.php'>Try Again</a> | <a href='index.html'>Return to Home Page</a>";
                             exit();

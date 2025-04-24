@@ -14,9 +14,10 @@
         echo "<p>Database connection failure</p>";
     } 
     else{
+        //check to see if the table exists
         $exists = $conn->query("SHOW TABLES LIKE 'statuses'");
         if($exists->num_rows == 0){
-            //check to see if table has already been dropped
+            //table doesn't exist
             echo "<p>statuses table currenlty doesn't exist</p>";
             echo "<a href='index.html'>Return to Home Page</a>";
             exit();
