@@ -1,0 +1,4 @@
+//place where all of the my sql commands will be located
+
+//create db
+
