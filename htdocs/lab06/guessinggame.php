@@ -17,7 +17,7 @@
 
         //check guess is a number
         if(!is_numeric($guess)){
-            $message = 'enter a number';
+            $message = 'you can only enter numbers';
         }
         else if($guess < 1 || $guess > 100){
             //check guess is between 1 and 100
