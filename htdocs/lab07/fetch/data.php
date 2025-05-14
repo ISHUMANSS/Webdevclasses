@@ -1,8 +1,26 @@
 <!--file data.php -->
+
+
 <?php
+	
+	//old php code for if i need to show the TA that I did task 2
 
+
+	// get name and password passed from client
+	$name = $_POST['name'];
+	$pwd = $_POST['pwd'];
+	$email = $_POST['email'];
+	// sleep for 10 seconds to slow server response down
+	// sleep(10);
+	// write back the password concatenated to end of the name
+	ECHO ($name." : ".$pwd." : ".$email)
+	
+?>
+
+
+<?php
 	//create the database
-
+/*
 	require_once ("../../files/settings.php"); 
     $conn = mysqli_connect(
         $host,
@@ -10,36 +28,65 @@
         $pswd,
         $dbnm
     );
-	f (!$conn) {
+	
+	if (!$conn) {
         //displays an error message
         echo "<p>Database connection failure</p>";
     } 
     else{
-		// get name and password passed from client
-		$name = $_GET['name'];
-		$pwd = $_GET['pwd'];
-
-
 		//check db exists / create db
-		$sql = "CREATE TABLE IF NOT EXISTS `statuses` (
+		$sql = "CREATE TABLE IF NOT EXISTS `lab7` (
 			`name` varchar(50) NOT NULL,
 			`password` varchar(50) NOT NULL,
 			`email` varchar(50)NOT NULL,
 			PRIMARY KEY (`name`)
 		)";
 		$conn ->query($sql);
+*/
+		//add some fake data
+		//RUN THIS CODE ONECE
 
 
-		//check if password is ok for the name
-		
+/*
+		$conn->query("INSERT IGNORE INTO lab7 (name, password, email) VALUES 
+			('alice', 'pass123', 'alice@example.com'),
+			('bob', 'secure456', 'bob@example.com'),
+			('charlie', 'hello789', 'charlie@example.com')"
+		);
+*/
+
+/*	
+		//get name and password passed from client
+		$name = $_POST['name'];
+		$pwd = $_POST['pwd'];
+		$email = $_POST['email'];
+
+
+		//check if everything checks out
+		$sql = "SELECT password, email FROM lab7 WHERE name = '$name'";
+		$result = mysqli_query($conn, $sql);
+
+		if (mysqli_num_rows($result) == 0) {
+			//name not in db
+			echo "Error: User '$name' not found.";
+		} else {
+			$row = mysqli_fetch_assoc($result);
+			if ($row['password'] !== $pwd) {
+				//wrong password
+				echo "Error: Incorrect password for '$name'.";
+			} else {
+				//name and password both wrong
+				echo "<strong>Email for $name:</strong> " . htmlspecialchars($row['email']);
+			}
+		}
 
 
 
 		// sleep for 10 seconds to slow server response down
 		// sleep(10);
 		// write back the password concatenated to end of the name
-		ECHO ($name." : ".$pwd)
+		ECHO ($name." : ".$pwd." : ".$email);
 
 	}
-
+*/
 ?>
