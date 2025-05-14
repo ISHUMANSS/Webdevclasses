@@ -5,7 +5,7 @@ function getData(dataSource, divID, aName, aPwd, aEmail)  {
 	var place = document.getElementById(divID);
 	var url = dataSource;
 
-	var requestBody = "name=" + encodeURIComponent(aName) + 
+	var requestBody = "&name=" + encodeURIComponent(aName) + 
 					  "&pwd="+ encodeURIComponent(aPwd) +
 					  "&email=" + encodeURIComponent(aEmail)
 	;
