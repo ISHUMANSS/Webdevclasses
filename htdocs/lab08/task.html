@@ -1,0 +1,133 @@
+<hml<!DOCTYPE html>
+    <html>
+        <head>
+            <title>Javascript and DOM</title>
+    
+            <style type="text/css">
+                body { font-size: small; }
+            </style>
+            <script type="text/javascript" src="domPrac.js"></script>
+        </head>
+        <body onload="makeTable()">
+            <h1>Javascript and DOM</h1>
+            <div>
+                <h2>a. running total subtotals</h2>
+                <script>
+                    var sum = 0;
+                    for (var i = 1; i <= 10; i++) {
+                        sum += i;
+                        document.write("subtotal: " + sum + "<br>");
+                    }
+    
+                </script>
+            </div>
+
+            <div>
+                <h2>b. change background colour</h2>
+
+                <script>
+                    function changeColour(colour){
+
+                        document.body.style.backgroundColor = colour;
+
+                    }
+
+                    function createButton(colour){
+                        const button = document.createElement('button');
+                        const contentDiv = document.getElementById("buttons");
+                        button.textContent = colour;
+                        button.addEventListener('click', function() {
+                            changeColour(colour);
+                        });
+                        contentDiv.appendChild(button);
+                    }
+
+                    window.onload = function() {
+                        //wasn't always creating the buttons in the right place because they are created to late in the html loading
+                        createButton('red');
+                        createButton('darkred');
+                        createButton('pink');
+                        createButton('blue');
+                        createButton('green');
+                    };
+                </script>           
+                <div id="buttons"></div>     
+
+            </div>
+    
+            <div>
+                <h2>d. split words up</h2>
+                <script>
+                    function printWords(){
+                        const input = prompt("enter a string consisting of several words separated by single spaces: " , "this is a sentance :)");
+                        const contentDiv = document.getElementById("output");
+                        if(input !== null && input.trim() !== ""){
+                            const words = input.trim().split(" ");
+
+                            console.log(words);
+
+                            contentDiv.innerHTML = "";
+                            words.forEach(function(word) {
+                                const p = document.createElement("p");
+                                p.textContent = word;
+                                contentDiv.appendChild(p);
+                            });
+
+                        }
+                    }
+                    
+                </script>
+                <div id="output"></div>
+                <button onclick="printWords()">Show Words</button>
+            </div>
+
+            <div>
+                <h2>e. js class</h2>
+
+                <script>
+                    
+                    class EmailRecord {
+                        constructor(name, email) {
+                            this.name = name;
+                            this.email = email;
+                        }
+
+                        print() {
+                            console.log(`${this.name} | ${this.email}`);
+                        }
+                    }
+
+                    //sample data
+                    const person1 = new EmailRecord("Alice Johnson", "alice@example.com");
+                    const person2 = new EmailRecord("Bob Smith", "bob@example.com");
+
+                    person1.print();
+                    person2.print();
+
+                    //json
+                    const jsonObject = {
+                        name: "Charlie Brown",
+                        email: "charlie@example.com"
+                    };
+
+                    //check to see if the object is part of the class
+                    console.log("will the json object be part of the class");
+                    console.log(jsonObject instanceof EmailRecord);//is not part of the class
+
+                    //use the data to make a instance of the class
+                    console.log("will the json object be part of the class if we just use its atributes");
+                    const person3 = new EmailRecord(jsonObject.name, jsonObject.email);
+                    person3.print();
+                    console.log(person3 instanceof EmailRecord);//is part of the class
+
+
+
+
+                </script>
+                <p>all of its info is printed into the console</p>
+            </div>
+    
+     
+            </div>
+        </body>
+    </html>
