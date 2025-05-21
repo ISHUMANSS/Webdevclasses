@@ -1,0 +1,25 @@
+{
+  "books": [
+    {
+      "title": "Beginning ASP.NET with CSharp",
+      "authors": "Hart, Kauffman, Sussman, Ullman",
+      "isbn": "0764588508",
+      "price": "39.99",
+      "coverImage": "begaspnet.jpg"
+    },
+    {
+      "title": "Book of cats",
+      "authors": ":3",
+      "isbn": "1121212121",
+      "price": "100",
+      "coverImage": "default_cover.jpg"
+    },
+    {
+      "title": "BIG BOOK OF CATS",
+      "authors": ":3:3",
+      "isbn": "212",
+      "price": "50",
+      "coverImage": "default_cover.jpg"
+    }
+  ]
+}

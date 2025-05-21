@@ -1,19 +1,24 @@
-<html xmlns="http://www.w3.org/1999/xhtml" >
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-  <script type="text/javascript" src="Cart.js"></script>  
+  <title>Book Catalog</title>
+  <script type="text/javascript" src="Cart.js"></script>
+
 </head>
-<body>
-<br/>
-<img id="cover" src="begaspnet.jpg" />
-<br />
-<br />
-<b>Book:</b><span id="book">Beginning ASP.NET with CSharp</span><br />
-<b>Authors: </b><span id="authors"> Hart, Kauffman, Sussman, Ullman</span>
-<br /><b>ISBN: </b><span id="ISBN">0764588508</span>
-<br /><b>Price: </b><span id="price">$39.99</span>
-<br /><br />
-<a href="#" onclick="AddRemoveItem('Add');" >Add to Shopping Cart</a>
-<br /><br />
-<span id="cart" ></span>
+<body onload="loadCatalog()">
+  <h1>Book Catalog</h1>
+  
+  <div style="display:none">
+    <span id="book">Beginning ASP.NET with CSharp</span>
+    <span id="authors">Hart, Kauffman, Sussman, Ullman</span>
+    <span id="ISBN">0764588508</span>
+    <span id="price">39.99</span>
+  </div>
+  
+  <!--catalog gets displayed here-->
+  <div id="catalog"></div>
+  
+  <h2>Shopping Cart</h2>
+  <div id="cart"></div>
 </body>
 </html>
