@@ -1,0 +1,17 @@
+[
+    {
+        "title": "PHP and MySQL Web Development",
+        "isbn": "978-0321833891",
+        "price": 54.99
+    },
+    {
+        "title": "JavaScript: The Definitive Guide",
+        "isbn": "978-0596805524",
+        "price": 49.99
+    },
+    {
+        "title": "HTML5: The Missing Manual",
+        "isbn": "978-1449363260",
+        "price": 29.99
+    }
+]

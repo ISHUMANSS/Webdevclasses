@@ -36,27 +36,27 @@
 				var tBody = document.createElement("TBODY");
 				theTable.appendChild(tBody);
 
-				var newRow = document.createElement("tr");
+				var newRow1 = document.createElement("tr");
 				var c1 = document.createElement("td");
 				var v1 = document.createTextNode("7308");
 				c1.appendChild(v1);
-				newRow.appendChild(c1);
+				newRow1.appendChild(c1);
 				var c2 = document.createElement("td");
 				var v2 = document.createTextNode("software engineering");
 				c2.appendChild(v2);
-				newRow.appendChild(c2);
+				newRow1.appendChild(c2);
 
 				//add button the the row
 				var selectBtn1 = document.createElement("button");
 				selectBtn1.textContent = "Select";
 				selectBtn1.onclick = function () {
-					selectRow(newRow);
+					selectRow(newRow1);
 				};
 				var c3 = document.createElement("td");
 				c3.appendChild(selectBtn1);
-				newRow.appendChild(c3);
+				newRow1.appendChild(c3);
 
-				tBody.appendChild(newRow);
+				tBody.appendChild(newRow1);
 
 				newRow = document.createElement("tr");
 				

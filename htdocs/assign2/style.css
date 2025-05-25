@@ -1,0 +1,43 @@
+/*I have re used some of my css from my assignment 1 like for the nav so i don't have to create it again*/
+
+:root{
+    /*use with var(--coulorname)*/
+
+    --background:#FAF9F6 ;
+
+    --navBackground: #4b5752;
+    --navButton: #83ebc1;
+    
+
+}
+
+.nav{
+    position: sticky;
+    top: 0;
+    overflow: hidden;
+
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    
+    justify-content: center;
+
+    gap: 5px;
+
+    align-content: space-around;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+
+    background-color: var(--navBackground);
+    border-radius: 12px;
+
+    /*change the buttons in the nav bar*/
+    .btn{
+        background-color: var(--navButton);
+
+    }
+}

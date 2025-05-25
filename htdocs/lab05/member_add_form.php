@@ -30,7 +30,7 @@
                 <input type="radio" name="gender" value="m"> Male
         
         <p>Email<input type="text" name="email" id="email" required></p>
-        <p>Phone<input type="text" name="phone" id="phone" required></p>
+        <p>Phone<input type="number" name="phone" id="phone" required ></p>
 
         <p><input type="submit" value="Submit" /></p>
 

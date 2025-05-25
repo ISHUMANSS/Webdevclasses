@@ -1,4 +1,5 @@
+Alister Faid 22171016
 //place where all of the my sql commands will be located
 
-//create db
+//create db and make sure it exists
 
