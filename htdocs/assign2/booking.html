@@ -38,15 +38,15 @@
                         </tr>
                         <tr>
                             <td><label for="snumber">Street Number:</label></td>
-                            <td><input type="text" name="snumber" placeholder="55" required></td>
+                            <td><input type="text" name="snumber" placeholder="1" required></td>
                         </tr>
                         <tr>
                             <td><label for="stname">Street Name:</label></td>
-                            <td><input type="text" name="stname" placeholder="Wellesley Street East" required></td>
+                            <td><input type="text" name="stname" placeholder="St Paul Street" required></td>
                         </tr>
                         <tr>
                             <td><label for="sbname">Suburb:</label></td>
-                            <td><input type="text" name="sbname" placeholder="Auckland City"></td>
+                            <td><input type="text" name="sbname" placeholder="Mangere"></td>
                         </tr>
                         <tr>
                             <td><label for="dsbname">Destination Suburb:</label></td>
@@ -61,6 +61,16 @@
                             <td><input id="time" type="time" name="time" required></td>
                         </tr>
                     </table>
+                    <!--set the date and time to current-->
+                    <script>
+                        const today = new Date();
+                        //get current date
+                        document.getElementById("date").value = today.toISOString().substr(0, 10);
+                        //get current time
+                        document.getElementById("time").value = today.getHours() + ":" + today.getMinutes();
+                    </script>
+
+                    <input name="submit" type="button" onclick="" value="Book Taxi">
 
                 </form>
 
