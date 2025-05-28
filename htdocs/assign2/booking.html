@@ -10,7 +10,7 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
         <title>Web Development Assignment 2</title>
 
-        <script type="text/javascript" scr="booking.js"></script>
+        <script type="text/javascript" src="booking.js"></script>
     </head>
     <body>
         <div class="container-fluid">
@@ -22,63 +22,66 @@
             <h1 class="page_title">Booking Request</h1>
             <div class="booking">
 
-                <form action="" method="post">
-                    <table>
-                        <tr>
-                            <td><label for="cname">Customer Name:</label></td>
-                            <td><input type="text" name="cname" placeholder="John Doe" required></td>
-                        </tr>
-                        <tr>
-                            <td><label for="phone">Phone Number:</label></td>
-                            <td><input type="text" name="phone" placeholder="12345678912" pattern="[0-9]{10,12}" maxlength="12" required></td>
-                        </tr>
-                        <tr>
-                            <td><label for="unumber">Unit Number:</label></td>
-                            <td><input type="text" name="unumber"></td>
-                        </tr>
-                        <tr>
-                            <td><label for="snumber">Street Number:</label></td>
-                            <td><input type="text" name="snumber" placeholder="1" required></td>
-                        </tr>
-                        <tr>
-                            <td><label for="stname">Street Name:</label></td>
-                            <td><input type="text" name="stname" placeholder="St Paul Street" required></td>
-                        </tr>
-                        <tr>
-                            <td><label for="sbname">Suburb:</label></td>
-                            <td><input type="text" name="sbname" placeholder="Mangere"></td>
-                        </tr>
-                        <tr>
-                            <td><label for="dsbname">Destination Suburb:</label></td>
-                            <td><input type="text" name="dsbname" placeholder="Manukau"></td>
-                        </tr>
-                        <tr>
-                            <td><label for="date">Pick-Up Date:</label></td>
-                            <td><input id="date" type="date" name="date" value="date" required></td>
-                        </tr>
-                        <tr>
-                            <td><label for="time">Pick-Up Time:</label></td>
-                            <td><input id="time" type="time" name="time" required></td>
-                        </tr>
-                    </table>
-                    <!--set the date and time to current-->
-                    <script>
-                        const today = new Date();
-                        //get current date
-                        document.getElementById("date").value = today.toISOString().substr(0, 10);
-                        //get current time
-                        document.getElementById("time").value = today.getHours() + ":" + today.getMinutes();
-                    </script>
 
-                    <input name="submit" type="button" onclick="" value="Book Taxi">
+                <div class="form_container">
+                    <form action="" method="post">
+                            <div class="form_item">
+                                <label for="cname">Customer Name:</label>
+                                <input type="text" name="cname" placeholder="John Doe" required>
+                            </div>
+                            <div class="form_item">
+                                <label for="phone">Phone Number:</label>
+                                <input type="text" name="phone" placeholder="12345678912" pattern="[0-9]{10,12}" maxlength="12" required>
+                            </div>
+                            <div class="form_item">
+                                <label for="unumber">Unit Number:</label>
+                                <input type="text" name="unumber">
+                            </div>
+                            <div class="form_item">
+                                <label for="snumber">Street Number:</label>
+                                <input type="text" name="snumber" placeholder="1" required>
+                            </div>
+                            <div class="form_item">
+                                <label for="stname">Street Name:</label>
+                                <input type="text" name="stname" placeholder="St Paul Street" required>
+                            </div>
+                            <div class="form_item">
+                                <label for="sbname">Suburb:</label>
+                                <input type="text" name="sbname" placeholder="Mangere">
+                            </div>
+                            <div class="form_item">
+                                <label for="dsbname">Destination Suburb:</label>
+                                <input type="text" name="dsbname" placeholder="Manukau">
+                            </div>
+                            <div class="form_item">
+                                <label for="date">Pick-Up Date:</label>
+                                <input id="date" type="date" name="date" value="date" required>
+                            </div>
+                            <div class="form_item">
+                                <label for="time">Pick-Up Time:</label>
+                                <input id="time" type="time" name="time" required>
+                            </div>
+                       
+                        <!--set the date and time to current-->
+                        <script>
+                            const today = new Date();
+                            //get current date
+                            document.getElementById("date").value = today.toISOString().substr(0, 10);
+                            //get current time
+                            document.getElementById("time").value = today.getHours() + ":" + today.getMinutes();
+                        </script>
 
-                </form>
+                        <div class="form_item">
+                            <input name="submit" type="button" onclick="" value="Book Taxi">
+                        </div>
+                    </form>
+                </div>
 
             </div>
 
 
             <!--target div for booking confirmation message-->
-            <div id="target_div"> 
+            <div id="reference"> 
                
             </div> 
         </div>

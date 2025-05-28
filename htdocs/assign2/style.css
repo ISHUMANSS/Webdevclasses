@@ -12,6 +12,10 @@
     --navButton: #83ebc1;
 
     --textColour: black;
+
+    --formBackground: #dddbc9;
+    --normalButton: #7fbad4;
+    --normalHover: #45a049;
     
 
 }
@@ -60,4 +64,51 @@
     flex-direction: column;
     align-content:center;
     
+}
+
+.form_container{
+    background-color: var(--formBackground);
+    padding: 10px;
+    
+    margin: 4px auto;
+    border-radius: 10px;
+    
+    
+
+    .btn{
+        background-color: var(--normalButton);
+    }
+
+    .btn:hover {
+        background-color: var(--normalHover);
+    }
+
+    .form_item{
+        /*used tp standise the */
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 15px;
+        
+        
+        label {
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        input{
+            padding: 7px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+        }
+       
+
+    }
+}
+
+#reference {
+    background-color: #e6f7ec;
+    border: 2px solid #a1d6b5;
+    padding: 15px 20px;
+    margin: 20px auto;
+    border-radius: 10px;
 }
