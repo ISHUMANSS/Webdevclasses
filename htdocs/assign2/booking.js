@@ -35,10 +35,17 @@ function handleBooking() {
 
     //check if pickup is valid
     //must be after current time and date
-    const pickupDateTime = new Date(`${pickupDate}T${pickupTime}`);
+    
+    //get the current date
     const now = new Date();
-    if (pickupDateTime.getTime() < now.getTime() - 60000) {//allow a min grace period
-        alert("Pick-up date and time must not be earlier than the current time");
+    now.setSeconds(0);
+    now.setMilliseconds(0);
+
+    const pickupDateTime = new Date(`${pickupDate}T${pickupTime}`);
+    //reject only if pickup is before the current time or date
+    //this allows future bookings but stops past bookings
+    if (pickupDateTime < now) {
+        alert("Pick up date and time must not be earlier than the current time");
         return;
     }
 

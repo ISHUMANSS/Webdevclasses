@@ -59,12 +59,6 @@
     background-color: var(--navButton);
 }
 
-.booking {
-    display: flex;
-    flex-direction: column;
-    align-content:center;
-    
-}
 
 .form_container{
     background-color: var(--formBackground);

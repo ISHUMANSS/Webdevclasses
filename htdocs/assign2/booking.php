@@ -47,7 +47,7 @@
             `dsbname` VARCHAR(50),
             `date` DATE NOT NULL,
             `time` TIME NOT NULL,
-            `bookingdatetime` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+            `bookingdatetime` TIMESTAMP  NOT NULL DEFAULT CURRENT_TIMESTAMP,
             `bookingstatus` ENUM('unassigned', 'assigned') NOT NULL DEFAULT 'unassigned'
         )";
         $conn ->query($sql);
