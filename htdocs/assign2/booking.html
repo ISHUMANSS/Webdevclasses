@@ -11,6 +11,30 @@
         <title>Web Development Assignment 2</title>
 
         <script type="text/javascript" src="booking.js"></script>
+
+
+
+
+        <script>
+            //script to make the time and date be the current time and date
+
+            //i didn't use dom organaly but found that the page loading time broke it
+            document.addEventListener('DOMContentLoaded', function() {
+                const today = new Date();
+                //automaticly get the current date when the page is loaded and update the value in the date selector
+                document.getElementById("date").value = today.toISOString().substr(0, 10);
+
+
+                //automaticly get the current time when the page is loaded and put that in the time selector
+                //had an issue where it would be in the incorrect format so i needed to add padStart
+                //so that it wouldn't be in the wrong format
+                const hours = today.getHours().toString().padStart(2, '0');
+                const minutes = today.getMinutes().toString().padStart(2, '0');
+
+                document.getElementById("time").value = hours + ":" + minutes;
+            });
+        </script>
+
     </head>
     <body>
         <div class="container-fluid">
@@ -20,6 +44,14 @@
                 <a href="admin.html" class="btn">Admin</a>
             </div>
             <h1 class="page_title">Booking Request</h1>
+
+             
+            <!--target div for booking confirmation message-->
+            <div id="reference"> 
+               
+            </div> 
+            <br>
+
             <div class="booking">
 
 
@@ -54,22 +86,14 @@
                                 <input type="text" name="dsbname" placeholder="Manukau">
                             </div>
                             <div class="form_item">
+                                <!--auto gets the current date-->
                                 <label for="date">Pick-Up Date:</label>
-                                <input id="date" type="date" name="date" value="date" required>
+                                <input id="date" type="date" name="date"  required>
                             </div>
                             <div class="form_item">
                                 <label for="time">Pick-Up Time:</label>
                                 <input id="time" type="time" name="time" required>
                             </div>
-                       
-                        <!--set the date and time to current-->
-                        <script>
-                            const today = new Date();
-                            //get current date
-                            document.getElementById("date").value = today.toISOString().substr(0, 10);
-                            //get current time
-                            document.getElementById("time").value = today.getHours() + ":" + today.getMinutes();
-                        </script>
 
                         <div class="form_item">
                             <input name="submit" type="button" onclick="" value="Book Taxi">
@@ -79,11 +103,7 @@
 
             </div>
 
-            <br>
-            <!--target div for booking confirmation message-->
-            <div id="reference"> 
-               
-            </div> 
+           
         </div>
     </body>
 </html>

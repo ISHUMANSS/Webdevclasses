@@ -13,6 +13,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
+
+
+
 function handleBooking() {
     //get all user data
     const form = document.querySelector("form");
