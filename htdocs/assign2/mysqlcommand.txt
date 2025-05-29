@@ -1,6 +1,8 @@
 Alister Faid 22171016 
 //place where all of the my sql commands will be located
 
+//SQL that is in booking.php
+
 //create booking db or make sure it exists
 CREATE TABLE IF NOT EXISTS `bookings` (
     `id` INT AUTO_INCREMENT PRIMARY KEY,
@@ -25,6 +27,31 @@ SELECT MAX(id) as max_id FROM bookings;
 INSERT INTO bookings (
     bookingref, cname, phone, unumber, snumber, stname, sbname, dsbname, date, time
 ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
+
+
+//SQL that is in admin.php
+
+//check the table exists
+SHOW TABLES LIKE 'bookings';
+
+//search for all bookings that are unassigned and in the next 2 hours
+SELECT * FROM bookings
+WHERE bookingstatus = 'unassigned'
+AND STR_TO_DATE(CONCAT(date, ' ', time), '%Y-%m-%d %H:%i:%s') BETWEEN ? AND ?;
+
+
+//search for a specific booking
+SELECT * FROM bookings WHERE bookingref=?;
+
+
+//update the assignment
+UPDATE bookings SET bookingstatus='assigned' WHERE bookingref=?;
+
+
+
+
+
+
 
 
 

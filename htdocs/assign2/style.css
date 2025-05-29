@@ -16,6 +16,8 @@
     --formBackground: #dddbc9;
     --normalButton: #7fbad4;
     --normalHover: #45a049;
+
+    --successBackground:#e6f7ec;
     
 
 }
@@ -63,7 +65,7 @@
 .form_container{
     background-color: var(--formBackground);
     
-    
+    padding: 10px;
     margin: 4px auto;
     border-radius: 10px;
     
@@ -99,9 +101,21 @@
 }
 
 #reference {
-    background-color: #e6f7ec;
-    border: 2px solid #a1d6b5;
-    padding: 15px 20px;
+    background-color: var(--successBackground);
+    text-align: center;
+    
     margin: 20px auto;
     border-radius: 10px;
+}
+
+
+#assigned{
+    background-color: var(--successBackground);
+    text-align: center;
+    border-radius: 10px;
+
+    
+    margin-top: 15px; 
+    border: 1px solid #c3e6cb; 
+    border-radius: 5px;
 }

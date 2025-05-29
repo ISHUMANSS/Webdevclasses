@@ -16,7 +16,7 @@
 
 
     if (!$conn) {
-        //displays an error message
+        //if connection fails kill it
         die("Connection failed: " . mysqli_connect_error());
     } 
     else{

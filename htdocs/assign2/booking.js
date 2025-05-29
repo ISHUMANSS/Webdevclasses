@@ -52,7 +52,7 @@ function handleBooking() {
         return;
     }
 
-    //all data that needs to be validated has been send the data to the server
+    //all data all the data is sent to the server
     //send booking request
     fetch("booking.php", {
         method: "POST",
