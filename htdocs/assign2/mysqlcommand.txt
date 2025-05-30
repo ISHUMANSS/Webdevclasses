@@ -29,20 +29,20 @@ INSERT INTO bookings (
 ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
 
 
+
+
 //SQL that is in admin.php
 
 //check the table exists
 SHOW TABLES LIKE 'bookings';
 
+//search for a specific booking
+SELECT * FROM bookings WHERE bookingref=?;
+
 //search for all bookings that are unassigned and in the next 2 hours
 SELECT * FROM bookings
 WHERE bookingstatus = 'unassigned'
 AND STR_TO_DATE(CONCAT(date, ' ', time), '%Y-%m-%d %H:%i:%s') BETWEEN ? AND ?;
-
-
-//search for a specific booking
-SELECT * FROM bookings WHERE bookingref=?;
-
 
 //update the assignment
 UPDATE bookings SET bookingstatus='assigned' WHERE bookingref=?;

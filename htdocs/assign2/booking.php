@@ -2,6 +2,12 @@
 //Alister Faid 22171016
 
 //handles the server side of the booking
+//create/make sure the database is there
+//make sure all the data is there
+//get the highest booking to create the booking refrence
+//insert the booking into the database
+//send the confirmation message
+
 
     //require the db login details
     require_once ("../../files/settings.php");

@@ -1,7 +1,9 @@
 //Alister Faid 22171016
 
 //client side of the admin
-
+//create the event listener to search the booking
+//handle the search and send with fetch
+//create the event listeners for the assign buttons
 
 
 //create event listener for searching

@@ -1,8 +1,9 @@
 //Alister Faid 22171016
 //handles the client side of the booking
 
+//adds the event listener for booking the taxi
 //handles data validation
-//handles sending booking request
+//handles sending booking request with fetch
 
 
 //create the event listener for when submit is clicked
@@ -10,8 +11,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const submitButton = document.querySelector('input[name="submit"]');
     submitButton.addEventListener("click", handleBooking);
 });
-
-
 
 
 

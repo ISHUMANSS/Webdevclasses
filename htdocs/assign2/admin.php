@@ -1,7 +1,12 @@
 <?php
-    //Alister Faid 22171016
+//Alister Faid 22171016
 
-    //server side of the admin
+//server side of the admin
+//make sure the database exists
+//check if the user is trying to assign a booking
+//allow the user to assign the booking and send the confimarion
+//search using what the user gave either nothing or the booking
+//send the search results
 
     //require the db login details
     require_once ("../../files/settings.php");
@@ -60,10 +65,12 @@
             $stmt = $conn->prepare("SELECT * FROM bookings WHERE bookingref=?");
             $stmt->bind_param("s", $search);
         } else {
-            //search for an empty listing
+            //search for every listing within 2 hours
             $now = date("Y-m-d H:i:s");
             //find what time it will be in two hours
             $twoHoursLater = date("Y-m-d H:i:s", strtotime("+2 hours"));
+
+            //searching for all the listings when you have just booked it for in a few mins or the next min can mean that the time has past when you try and check it with the admin
 
             //find all the unassigned bookings in the next 2 hours
             $stmt = $conn->prepare("
@@ -83,12 +90,12 @@
             echo "No bookings found or no unassigned in the next 2 hours";
         } else {
             echo "<table class='table table-bordered'><thead><tr>
-                    <th>Booking Ref</th>
+                    <th>Booking reference number</th>
                     <th>Customer Name</th>
                     <th>Phone</th>
                     <th>Pickup Suburb</th>
                     <th>Destination Suburb</th>
-                    <th>Pickup Date & Time</th>
+                    <th>Pickup date and time</th>
                     <th class='status'>Status</th>
                     <th>Assign</th>
                 </tr></thead><tbody>";
